@@ -7,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const API_URL = 'https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions';
 const REQUEST_TIMEOUT = 55000;
+const API_KEY = process.env.ASTRON_MAAS_API_KEY || process.env.VITE_API_KEY;
 const ALLOWED_ORIGINS = new Set([
   'https://iflytek.github.io',
   'http://localhost:5173',
@@ -64,11 +65,15 @@ app.post('/api/chat', async (req, res) => {
   const requestBody = req.body && typeof req.body === 'object' ? req.body : {};
 
   try {
+    if (!API_KEY) {
+      return res.status(500).json({ error: 'Missing API key', details: 'Set ASTRON_MAAS_API_KEY or VITE_API_KEY' });
+    }
+
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.VITE_API_KEY}`
+        'Authorization': `Bearer ${API_KEY}`
       },
       body: JSON.stringify(requestBody),
       signal: controller.signal
