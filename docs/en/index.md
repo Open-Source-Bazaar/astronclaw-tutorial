@@ -31,7 +31,7 @@ features:
     details: Covers multiple real business loops such as social media operation, daily office collaboration, investment monitoring, and e-commerce operation.
     link: /en/guide/loomy/scenarios
   - title: 06 High Security & Zero Maintenance Cost
-    details: Platform hosting, enterprise-level security protection; Loomy's directory-level authorization ensures local data privacy, making AI land safely.
+    details: Platform hosting and enterprise-level security protection; Loomy's directory-level authorization protects local data privacy and supports secure AI adoption.
 
 ---
 

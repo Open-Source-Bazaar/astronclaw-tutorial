@@ -1,7 +1,7 @@
 # Toolbox and Skill System
 
 ## Toolbox (MCP)
-Loomy's toolbox function allows AI to connect and use various external tools, greatly expanding the boundaries of AI capabilities. By configuring **MCP (Model Context Protocol)** services, Loomy can read operation data, execute actual operations, get real-time information, and string together workflows.
+Loomy's toolbox allows AI to connect to and use various external tools, greatly expanding the boundaries of AI capabilities. By configuring **MCP (Model Context Protocol)** services, Loomy can read operational data, execute real actions, retrieve real-time information, and connect workflows.
 
 **Access Toolbox Settings**
 Click "Settings" on the left menu bar of the application, and then select the "Toolbox" option to enter the toolbox configuration page.
@@ -96,7 +96,7 @@ Click on any skill card to view the detailed description of the skill and set th
 | **Ask** | AI will ask you for your consent before calling, and will only execute after confirmation |
 | **Forbid** | Completely disable the skill, AI will not call it |
 
-It is recommended to set "Allow" for frequently used skills in daily life, and "Ask" for skills involving sensitive operations (such as sending emails), which maintains efficiency while preserving control over key operations.
+It is recommended to set "Allow" for frequently used everyday skills and "Ask" for skills involving sensitive operations, such as sending emails. This maintains efficiency while preserving control over key operations.
 
 ![Skill Permission Settings](/loomy/skills/skills_view.png)
 
