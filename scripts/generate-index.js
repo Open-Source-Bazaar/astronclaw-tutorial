@@ -26,7 +26,7 @@ const chunks = [];
 
 function processFiles(files, lang) {
   files.forEach(file => {
-    const content = fs.readFileSync(file, 'utf-8');
+    const content = fs.readFileSync(file, 'utf-8').replace(/\r\n?/g, '\n');
     const lines = content.split('\n');
     let currentHeading = '';
     let currentContent = [];

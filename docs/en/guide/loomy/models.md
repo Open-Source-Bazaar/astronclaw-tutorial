@@ -22,26 +22,89 @@ In the "Default Model Configuration" area, you can see the currently used model.
 
 After the selection is complete, click the "Save" button, and then return to the homepage to use the newly selected model for conversations and task execution.
 
-## Add Custom Providers
-If you want to use other AI service providers or use your own deployed model services, you can add custom providers:
+## Configure Custom Models
+If you have your own model service provider, you can configure any provider compatible with the **OpenAI protocol** in Loomy. The following uses "Zhipu" as an example to walk through the full configuration process.
 
-1.  In the "AI Providers" area, click the "+ Add Custom Provider" button in the upper right corner
-2.  Fill in the relevant configuration information of the provider:
-    *   API Key
-    *   API Address
-    *   Model Name
-    *   Other necessary parameters
-3.  Click "Configure" or "Save" to complete the addition
+### 1. Access Service Provider Configuration
+1.  Go to **"Settings" → "Models"** in the left sidebar.
+2.  Switch to the **"Service Provider Configuration"** tab.
 
-After the addition is successful, the custom provider will appear in the provider list, and you can switch to use it in the model selector.
+Here you can configure the built-in default providers (DeepSeek, Doubao, Qwen, Zhipu, etc.), or click **"+ Add Custom Service Provider"** in the upper right corner to add any provider compatible with the OpenAI protocol.
 
-## Configure Existing Providers
-For providers whose status is shown as "Disabled" in the list (such as OpenAI, Google Gemini, iFLYTEK Spark, Kimi, etc.), you need to configure them first before you can use them:
+![Service Provider Configuration Page](/loomy/custom-models/cm-1.png)
 
-1.  Click the "Configure" button on the right side of the corresponding provider card
-2.  Fill in the API Key and other configuration information required by the provider
-3.  After saving the configuration, the provider's status will change to "Enabled"
-4.  Then you can select the provider's model in the model selector
+### 2. Configure a Service Provider (Example: Zhipu)
+**2.1 Enter the API Key**
+
+1.  Locate the provider card (such as "Zhipu") and click **"Configure"**.
+2.  Get your API Key from the [Zhipu Open Platform](https://open.bigmodel.cn/).
+3.  Paste the key into the input field.
+
+![Configuring Zhipu Service Provider](/loomy/custom-models/cm-1.5.png)
+
+**2.2 Fetch Available Models**
+
+*   **Auto-fetch**: Click **"Fetch from API"** in the "Available Models" section. The list will be populated automatically (such as `glm-4.6`, `cogview-4`).
+*   **Manual add**: If the provider does not support auto-fetch, add the model ID manually.
+
+![Fetching Available Models](/loomy/custom-models/cm-2.png)
+
+![Fetching Available Models](/loomy/custom-models/cm-2.5.png)
+
+**2.3 Configure the Model Card**
+
+Click a specific model to open its configuration card. Key settings include:
+
+*   **Input/Output Modalities:**
+    *   **Multimodal models**: Check the relevant input modalities (`text`, `image`, `audio`) to make full use of capabilities.
+    *   **Image generation models**: You must check the **output modality** as `image` (such as Zhipu's `cogview` series).
+*   **Token Limits:**
+    *   **Context window**: The maximum supported context length.
+    *   **Max output tokens**: The maximum tokens for a single generation.
+    *   ⚠️ **Constraint**: If a context window is configured, **max output tokens is required**.
+
+![Configure the Model Card](/loomy/custom-models/cm-2.6.png)
+
+> **Best Practice**: Fully configuring modalities and token limits gives Loomy an accurate capability profile, resulting in more stable conversations and task outputs.
+
+**2.4 Save and Apply**
+
+Click **"Save and Apply"** at the bottom of the page to activate the current provider's configuration.
+
+### 3. Enable Custom Models
+Switch from Loomy's default models to your custom configuration:
+
+1.  Go to the **"Model Configuration"** tab.
+2.  Toggle **"Enable Custom Models"** to **ON**.
+3.  Select your configured model from the selector (such as `glm-4.6`).
+4.  Click **"Save"**.
+
+![Enabling Custom Models](/loomy/custom-models/cm-4.png)
+
+![Selecting a Custom Model](/loomy/custom-models/cm-5.png)
+
+### 4. Configure the Default Image Generation Model
+To allow the `Loomy_image` tool to use your custom provider for image generation:
+
+1.  In the **"Model Configuration"** tab, find **"Default Image Generation Model"**.
+2.  Select a configured model from the dropdown (ensure its **output modality** is set to `image`).
+3.  Click **"Save"**.
+
+![Configure the Default Image Generation Model](/loomy/custom-models/cm-3.png)
+
+When you trigger the tool with a prompt such as *"Generate a photo of a cute kitten sitting on a sunny windowsill, with blue sky and white clouds in the background"*, your specified model will be used.
+
+![Image Generation Result](/loomy/custom-models/cm-6.png)
+
+> **Troubleshooting**: If the model does not appear in the dropdown, verify that the **output modality** is set to `image` in the service provider configuration.
+
+### 5. Verification
+Perform these checks in the chat interface to confirm a successful configuration:
+
+*   **Chat model**: Ask *"Who are you? Which company developed you?"* to verify it returns the Zhipu GLM identity.
+*   **Image model**: Send an image generation prompt (such as *"Draw a Shiba Inu skateboarding on the moon"*) and verify that the `Loomy_image` tool returns an image.
+
+![Verify Custom Models](/loomy/custom-models/cm-7.png)
 
 ## Data Security Instructions
 **Local Storage**: All API Keys, configuration information, and model settings are saved on your local device. Loomy will not upload or obtain this sensitive information. You can configure and use various AI services with confidence.
@@ -59,6 +122,18 @@ No. After switching models and saving, return to the homepage to use the new mod
 
 ### Can I configure multiple providers at the same time?
 Yes. You can configure multiple AI providers and switch between different models at any time when needed.
+
+### What if "Fetch from API" fails?
+*   Verify that the API Key is correct and valid.
+*   Make sure you can access the provider's API domain.
+*   If the provider has no model-list endpoint, add the model ID manually.
+
+### What if I set a context window but forgot to set max output tokens?
+The system will block saving and prompt you to fill in the missing field. Refer to the `max_tokens` limit in the provider's official documentation.
+
+### Why does the image generation model produce no image output?
+*   Make sure the **output modality** is checked as `image` in the model card.
+*   Make sure the model is selected as the **Default Image Generation Model** in "Model Configuration".
 
 ---
 
