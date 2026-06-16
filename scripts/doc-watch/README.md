@@ -13,11 +13,13 @@
 
 ```
 scripts/doc-watch/
-  check-updates.mjs     # 抓取 + 对比引擎（零依赖，Node 18+ 内置 fetch）
+  lib.mjs               # 共享库：抓取 + HTML 解析助手（零依赖）
+  check-updates.mjs     # 抓取 + 对比引擎（退出码 0/1/2）
+  draft-with-openai.mjs # 可选：用 OpenAI 起草新页面+下载配图+联网检索，产出 PR 描述
   baseline/             # 基线快照（每源一个 JSON：页面 / 小节 / 图片 / 正文哈希）
     loomy.json
     astronclaw.json
-.github/workflows/doc-watch.yml   # 每日 cron，发现变化时维护一条 [doc-watch] Issue
+.github/workflows/doc-watch.yml   # 每日 cron：Issue 告警 +（可选）OpenAI 起草并开 PR
 ```
 
 ## 本地用法
@@ -56,10 +58,40 @@ node scripts/doc-watch/check-updates.mjs --update
 自动维护**一条**带 `doc-watch` 标签的 Issue，列出新增页面 / 小节 / 图片 URL，供后续补全。
 免费、纯确定性，但不含联网搜索与自动起草。
 
-### 第二层：Claude 定时云 agent（联网搜索 + 自动起草 PR）
+### 第二层 A：OpenAI 起草（在 GitHub Actions 里跑你自己的 API，省 Claude 额度）✅ 推荐
 
-确定性巡检之上，再用一个每日 Claude routine 完成「联网找新内容 + 抓图 + 起草 PR」。
-routine 的提示词如下（可直接用于 `/schedule` 或定时 agent）：
+`draft-with-openai.mjs` 用 **OpenAI Responses API**（自带 `web_search` 内置工具）完成
+「读懂上游新页面 → 起草中英双语页面 → 下载配图 → 联网检索官方更新」，按你自己的
+OpenAI key 计费，不消耗 Claude 额度。工作流在检测到变化且配置了 key 时自动调用它并开 PR。
+
+启用步骤：
+
+1. 仓库 **Settings → Secrets and variables → Actions**：
+   - 新增 Secret `OPENAI_API_KEY` = 你的 OpenAI key。
+   - （可选）新增 Variable `OPENAI_MODEL`，默认 `gpt-4.1`；须用支持 `web_search` 的模型。
+2. 仓库 **Settings → Actions → General → Workflow permissions**：勾选
+   **「Allow GitHub Actions to create and approve pull requests」**（否则无法自动开 PR）。
+3. 之后每天若上游有新增页面，工作流会自动：起草双语页面 + 下载配图 → `npm run docs:build`
+   → 刷新基线 → 开一个 `docs: 同步上游文档新增内容 (日期)` 的待审 PR。
+
+本地试跑（需要 key；`--dry-run` 不调用 OpenAI、不写文件，仅打印计划）：
+
+```bash
+node scripts/doc-watch/draft-with-openai.mjs --dry-run
+OPENAI_API_KEY=sk-... node scripts/doc-watch/draft-with-openai.mjs
+```
+
+护栏：只自动镜像新的 Loomy 内容页（跳过法务/隐私/索引页）；侧边栏入口与「内容有改动的
+已有页面 / AstronClaw 指南」留在 PR 描述里由人工处理；PR 仅起草、不自动合并，需人工审阅。
+另需 `OPENAI_BASE_URL` 时可指向 OpenAI 兼容端点。
+
+> ⚠️ web_search 需要联网；纯文档同步（翻译/改写上游正文）即使模型不带搜索也能完成，
+> 只有「发现全网全新功能」那部分依赖 web_search。
+
+### 第二层 B：Claude 定时云 agent（备选，消耗 Claude 额度）
+
+如果不想用 OpenAI，也可以用一个每日 Claude routine 完成同样的「联网找新内容 + 抓图 +
+起草 PR」。routine 的提示词如下（可直接用于 `/schedule` 或定时 agent）：
 
 ```
 每天巡检本仓库的上游文档，发现并补全新内容：

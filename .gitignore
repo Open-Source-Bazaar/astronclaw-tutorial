@@ -54,3 +54,7 @@ secrets.js
 ehthumbs.db
 Thumbs.db
 Desktop.ini
+
+# doc-watch 生成的临时报告
+doc-watch-report.md
+doc-watch-draft-pr.md
