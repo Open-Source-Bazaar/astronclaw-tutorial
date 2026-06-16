@@ -45,9 +45,11 @@ export default defineConfig({
               { text: '介绍与定位', link: '/guide/loomy/introduction' },
               { text: '快速开始', link: '/guide/loomy/quick-start' },
               { text: '模型与聊天', link: '/guide/loomy/models' },
+              { text: 'AI 搭子', link: '/guide/loomy/companions' },
               { text: '工具箱与技能系统', link: '/guide/loomy/toolbox' },
               { text: '定时任务与积分', link: '/guide/loomy/scheduled-tasks' },
               { text: '远程控制', link: '/guide/loomy/remote-control' },
+              { text: '办公 CLI 集成', link: '/guide/loomy/office-cli' },
               { text: '典型工作场景', link: '/guide/loomy/scenarios' },
               { text: '常见问题', link: '/guide/loomy/faq' }
             ]
@@ -92,9 +94,11 @@ export default defineConfig({
               { text: 'Introduction', link: '/en/guide/loomy/introduction' },
               { text: 'Quick Start', link: '/en/guide/loomy/quick-start' },
               { text: 'Models & Chat', link: '/en/guide/loomy/models' },
+              { text: 'AI Companions', link: '/en/guide/loomy/companions' },
               { text: 'Toolbox & Skills', link: '/en/guide/loomy/toolbox' },
               { text: 'Scheduled Tasks', link: '/en/guide/loomy/scheduled-tasks' },
               { text: 'Remote Control', link: '/en/guide/loomy/remote-control' },
+              { text: 'Office CLI', link: '/en/guide/loomy/office-cli' },
               { text: 'Scenarios', link: '/en/guide/loomy/scenarios' },
               { text: 'FAQ', link: '/en/guide/loomy/faq' }
             ]
