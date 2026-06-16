@@ -1,0 +1,84 @@
+# doc-watch · 上游文档每日巡检
+
+每天抓取上游文档站，与仓库基线对比，发现**新增内容 / 新增图片**，并辅助把新内容（含配图）补全到本教程站点。
+
+## 监测的源
+
+| 源 | 地址 | 抓取方式 |
+|---|---|---|
+| Loomy Docs | https://loomy.xunfei.cn/docs | VitePress SSG，自动从侧边栏发现全部页面 |
+| AstronClaw 使用指南 | https://www.xfyun.cn/doc/spark/Agent-AstronClaw使用指南.html | 单页 SSR |
+
+## 组成
+
+```
+scripts/doc-watch/
+  check-updates.mjs     # 抓取 + 对比引擎（零依赖，Node 18+ 内置 fetch）
+  baseline/             # 基线快照（每源一个 JSON：页面 / 小节 / 图片 / 正文哈希）
+    loomy.json
+    astronclaw.json
+.github/workflows/doc-watch.yml   # 每日 cron，发现变化时维护一条 [doc-watch] Issue
+```
+
+## 本地用法
+
+```bash
+# 巡检：与基线对比，有变化时退出码 1，并打印 Markdown 报告
+node scripts/doc-watch/check-updates.mjs
+
+# 把报告写到文件
+node scripts/doc-watch/check-updates.mjs --report report.md
+
+# 输出 JSON（便于程序消费）
+node scripts/doc-watch/check-updates.mjs --json
+
+# 首次创建 / 重建基线
+node scripts/doc-watch/check-updates.mjs --init
+
+# 接受当前线上状态为新基线（补全内容后执行，用于关闭巡检告警）
+node scripts/doc-watch/check-updates.mjs --update
+```
+
+退出码：`0` 无变化 · `1` 有新增/变化 · `2` 抓取失败。
+
+## 工作机制
+
+1. Loomy 站点是 VitePress，HTML 里直接含侧边栏全部页面链接 → 自动发现页面清单，无需浏览器。
+2. 每页提取：标题、各级小节标题（h1–h4）、正文图片 URL（已绝对化，过滤站点 logo）、正文文本哈希。
+3. 与 `baseline/*.json` 对比，输出：🆕 新增页面 / ✏️ 内容变化（含新增小节、新增图片）/ 🗑️ 下线页面。
+4. 基线提交在仓库里；补全内容的 PR 顺带 `--update` 刷新基线，避免重复告警。
+
+## 两层自动化
+
+### 第一层：GitHub Actions（确定性巡检，已内置）
+
+`.github/workflows/doc-watch.yml` 每天 01:00 UTC（北京时间 09:00）运行脚本。发现变化时，
+自动维护**一条**带 `doc-watch` 标签的 Issue，列出新增页面 / 小节 / 图片 URL，供后续补全。
+免费、纯确定性，但不含联网搜索与自动起草。
+
+### 第二层：Claude 定时云 agent（联网搜索 + 自动起草 PR）
+
+确定性巡检之上，再用一个每日 Claude routine 完成「联网找新内容 + 抓图 + 起草 PR」。
+routine 的提示词如下（可直接用于 `/schedule` 或定时 agent）：
+
+```
+每天巡检本仓库的上游文档，发现并补全新内容：
+
+1. 运行 `node scripts/doc-watch/check-updates.mjs --report /tmp/doc-watch.md`，读取报告。
+2. 若报告显示有「新增页面 / 新增小节 / 新增图片」：
+   - 对每处新内容，抓取上游对应页面与配图（图片落到 docs/public/loomy/<区域>/ 或
+     docs/public/astronclaw/，本地引用而非外链）。
+   - 按现有页面风格写成中文页面，并补一份等价的英文页面（docs/ 与 docs/en/）。
+   - 需要时更新 docs/.vitepress/config.mts 的中英侧边栏。
+3. 此外，联网搜索 Loomy / 讯飞 AstronClaw 的近期官方更新（发布说明、新功能、新渠道、
+   新技能），判断是否有本站尚未覆盖、且适合补充的内容；有则一并补上并注明来源。
+4. 运行 `npm run docs:build` 确认死链检查通过、搜索索引重新生成。
+5. 运行 `node scripts/doc-watch/check-updates.mjs --update` 刷新基线。
+6. 新建分支并开 PR，标题 `docs: 同步上游文档新增内容 (<日期>)`，PR 描述列出每处新增的来源链接。
+   遵循仓库约定：提交与 PR 不得包含任何 AI 署名。
+   若本次无任何新增，则不创建 PR，仅留一句说明。
+```
+
+> 说明：联网搜索与「读懂新内容→翻译成双语页面→挑选配图」需要判断力，必须由带联网与
+> 写作能力的 agent 完成；纯 CI 只能做到确定性 diff + 告警。两层配合即可覆盖
+> 「抓取 + 对比 + 配图 + 联网补全」的完整需求。
