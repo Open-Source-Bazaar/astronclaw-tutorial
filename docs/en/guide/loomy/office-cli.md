@@ -15,7 +15,7 @@ Supported capabilities include: **Messages and Groups** (search messages and gro
 
 ![Feishu CLI core capabilities across business domains](/loomy/feishu-cli/capabilities.png)
 
-### Pre-use Checks
+### Feishu CLI Pre-use Checks
 The Feishu CLI is integrated by default and usually does not require manual configuration. If you encounter issues, you can confirm the status with the following steps.
 
 **Check the Toolbox**
@@ -73,7 +73,7 @@ The Feishu CLI is now configured and ready to use.
 
 ![Informing Loomy that authorization is complete](/loomy/feishu-cli/auth-done.png)
 
-### Use Cases
+### Feishu CLI Use Cases
 
 **Query your schedule**
 
@@ -105,7 +105,7 @@ Loomy can send content directly to a specified contact in Feishu.
 
 The DingTalk CLI is integrated into Loomy through the MCP protocol, covering DingTalk's core business domains so that AI can complete DingTalk-related work directly in conversation, supporting messaging, document collaboration, schedule management, to-do tasks, and more.
 
-### Pre-use Checks
+### DingTalk CLI Pre-use Checks
 The DingTalk CLI is integrated by default and usually does not require manual configuration. If you encounter issues, you can confirm the status with the following steps.
 
 **Check the Toolbox**
@@ -149,7 +149,7 @@ Loomy will automatically verify the connection status to confirm whether authori
 
 ![Loomy verifying the DingTalk connection status](/loomy/dingding-cli/auth-verify.png)
 
-### Use Cases
+### DingTalk CLI Use Cases
 
 **Query schedules and to-dos**
 
@@ -190,7 +190,7 @@ After clicking Configure, the system automatically opens a terminal. Follow the 
 
 ![Complete WeCom CLI initialization following the terminal prompts](/loomy/wecom-cli/terminal-init.png)
 
-### Pre-use Checks
+### WeCom CLI Pre-use Checks
 After configuration, you can confirm the following statuses:
 
 *   Go to "Settings" → "Toolbox" and confirm the WeCom CLI status shows "Available".
