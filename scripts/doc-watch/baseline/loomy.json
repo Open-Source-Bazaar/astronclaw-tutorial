@@ -1,0 +1,638 @@
+{
+  "source": "loomy",
+  "name": "Loomy Docs",
+  "pageCount": 24,
+  "pages": {
+    "https://loomy.xunfei.cn/docs": {
+      "url": "https://loomy.xunfei.cn/docs",
+      "title": "介绍 | Loomy",
+      "headings": [
+        "h1:介绍",
+        "h2:典型场景",
+        "h3:自媒体运营",
+        "h3:日常办公协同",
+        "h3:投资与信息盯盘",
+        "h3:日历与待办管理",
+        "h3:远程移动办公",
+        "h3:电商与业务运营",
+        "h2:常见问题",
+        "h3:我的文件会被上传到云端吗？",
+        "h3:AI 能访问我的哪些文件？",
+        "h3:Loomy 可以使用我自己的模型服务提供商 API Key 吗？",
+        "h3:适合什么样的用户？"
+      ],
+      "images": [],
+      "textHash": "ec834dd134982dc7",
+      "textLen": 1649
+    },
+    "https://loomy.xunfei.cn/docs/Safe/Loomy-child-privacy": {
+      "url": "https://loomy.xunfei.cn/docs/Safe/Loomy-child-privacy",
+      "title": "Loomy 儿童隐私保护政策 | Loomy",
+      "headings": [
+        "h1:Loomy 儿童隐私保护政策",
+        "h2:一、我们如何收集和使用儿童个人信息",
+        "h2:二、我们如何委托处理、共享、转让、公开披露儿童个人信息",
+        "h3:1. 委托处理、共享",
+        "h3:2. 转让",
+        "h3:3. 公开披露",
+        "h2:三、我们如何保护儿童的个人信息",
+        "h2:四、我们如何存储儿童的个人信息",
+        "h2:五、我们如何管理儿童的个人信息的权利",
+        "h2:六、我们如何更新本政策",
+        "h2:七、如何联系我们",
+        "h2:八、其他"
+      ],
+      "images": [],
+      "textHash": "7deaa4e9fa2e8cc5",
+      "textLen": 4665
+    },
+    "https://loomy.xunfei.cn/docs/Safe/Loomy-credit": {
+      "url": "https://loomy.xunfei.cn/docs/Safe/Loomy-credit",
+      "title": "Loomy 积分充值服务协议 | Loomy",
+      "headings": [
+        "h1:Loomy 积分充值服务协议",
+        "h2:一、积分性质与获取",
+        "h2:二、积分消耗规则",
+        "h2:三、退款与发票政策",
+        "h2:四、商业化禁止与违规处理",
+        "h2:五、 协议变更与终止"
+      ],
+      "images": [],
+      "textHash": "6c512cb90d292246",
+      "textLen": 1917
+    },
+    "https://loomy.xunfei.cn/docs/Safe/Loomy-privacy": {
+      "url": "https://loomy.xunfei.cn/docs/Safe/Loomy-privacy",
+      "title": "Loomy 隐私政策 | Loomy",
+      "headings": [
+        "h1:Loomy 隐私政策",
+        "h2:一、定义及适用范围",
+        "h3:1. 定义",
+        "h3:2. 适用范围",
+        "h2:二、我们如何收集和使用您的个人信息",
+        "h3:1. 向您提供产品与/或服务过程中您主动提供的个人信息",
+        "h4:1.1 账号体系与身份验证",
+        "h4:1.2 内容生成与 AI 辅助",
+        "h4:1.3 配置 MCP 或工具",
+        "h4:1.4 配置大模型 API Key",
+        "h4:1.5 远程控制",
+        "h4:1.6 系统级权限与屏幕视觉数据处理",
+        "h3:2. 向您提供产品与/服务过程中我们主动收集的个人信息",
+        "h4:2.1 积分",
+        "h4:2.2 数据分析与服务提升",
+        "h4:2.3 运行日志与安全风控",
+        "h4:2.4 服务订阅",
+        "h2:三、我们如何共享、转让、公开披露您的信息",
+        "h3:1. 第三方服务与插件",
+        "h3:2. 授权合作伙伴共享",
+        "h4:2.1 讯飞账号服务",
+        "h4:2.2 飞书开放平台 SDK",
+        "h4:2.3 钉钉流式消息 SDK",
+        "h4:2.4 QQ 机器人接入能力",
+        "h4:2.5 邮件服务（ nodemailer 、 imap 、 mailparser 、 poplib ）",
+        "h4:2.6 浏览器自动化（ playwright 、 playwright-core ）",
+        "h4:2.7 本地配置存储（ electron-store ）",
+        "h4:2.8 iDATA 数据服务能力",
+        "h4:2.9 订单管理系统 API / 交易服务接口",
+        "h3:3. 转让与公开披露",
+        "h3:4. 共享、转让、公开披露个人信息时事先征得授权同意的例外",
+        "h2:四、我们如何存储与保护您的信息",
+        "h3:1. 存储信息的地点",
+        "h3:2. 存储信息的期限",
+        "h3:3. 我们如何保护您的个人信息",
+        "h3:4. 匿名化分析说明",
+        "h3:5. 数据安全措施",
+        "h2:五、您如何管理您的信息",
+        "h3:1. 撤回底层权限",
+        "h3:2. 查阅、更正与删除您的个人信息",
+        "h3:3. 注销账户",
+        "h2:六、未成年人个人信息保护",
+        "h2:七、本政策如何更新",
+        "h2:八、如何联系我们",
+        "h2:九、其他"
+      ],
+      "images": [],
+      "textHash": "b389e0cc9f5330c5",
+      "textLen": 14440
+    },
+    "https://loomy.xunfei.cn/docs/Safe/Loomy-user": {
+      "url": "https://loomy.xunfei.cn/docs/Safe/Loomy-user",
+      "title": "Loomy 用户协议 | Loomy",
+      "headings": [
+        "h1:Loomy 用户协议",
+        "h2:重要提示",
+        "h2:一、定义",
+        "h2:二、协议适用范围",
+        "h2:三、账户注册与管理",
+        "h2:四、您的权利与义务",
+        "h3:1. 内容生成与服务规范",
+        "h3:2. 服务使用特别提示",
+        "h3:3. 您对最终用户的责任",
+        "h2:五、科讯创想的权利与义务",
+        "h2:六、知识产权",
+        "h2:七、权利保护声明",
+        "h2:八、第三方服务",
+        "h2:九、广告",
+        "h2:十、责任限制与免责声明",
+        "h2:十一、用户信息保护",
+        "h2:十二、未成年人保护",
+        "h2:十三、违约责任",
+        "h2:十四、服务的变更、中断和终止",
+        "h2:十五、通知与送达",
+        "h2:十六、法律适用与争议解决",
+        "h2:十七、其他"
+      ],
+      "images": [],
+      "textHash": "69bfeefaa79638ad",
+      "textLen": 9384
+    },
+    "https://loomy.xunfei.cn/docs/case": {
+      "url": "https://loomy.xunfei.cn/docs/case",
+      "title": "案例展示 | Loomy",
+      "headings": [
+        "h1:案例展示",
+        "h2:晨间智能播报",
+        "h2:学习进度管理",
+        "h2:内容创作与运营",
+        "h2:文档智能管理",
+        "h2:电商直播助手"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/usercase/case1.png",
+        "https://loomy.xunfei.cn/docs/images/usercase/case4.png",
+        "https://loomy.xunfei.cn/docs/images/usercase/case2.png",
+        "https://loomy.xunfei.cn/docs/images/usercase/case3-1.png",
+        "https://loomy.xunfei.cn/docs/images/usercase/case3-2.png",
+        "https://loomy.xunfei.cn/docs/images/usercase/case5.png"
+      ],
+      "textHash": "94552aa089fff362",
+      "textLen": 1523
+    },
+    "https://loomy.xunfei.cn/docs/introduction": {
+      "url": "https://loomy.xunfei.cn/docs/introduction",
+      "title": "介绍 | Loomy",
+      "headings": [
+        "h1:介绍",
+        "h2:典型场景",
+        "h3:自媒体运营",
+        "h3:日常办公协同",
+        "h3:投资与信息盯盘",
+        "h3:日历与待办管理",
+        "h3:远程移动办公",
+        "h3:电商与业务运营",
+        "h2:常见问题",
+        "h3:我的文件会被上传到云端吗？",
+        "h3:AI 能访问我的哪些文件？",
+        "h3:Loomy 可以使用我自己的模型服务提供商 API Key 吗？",
+        "h3:适合什么样的用户？"
+      ],
+      "images": [],
+      "textHash": "ec834dd134982dc7",
+      "textLen": 1649
+    },
+    "https://loomy.xunfei.cn/docs/quick-start": {
+      "url": "https://loomy.xunfei.cn/docs/quick-start",
+      "title": "快速开始 | Loomy",
+      "headings": [
+        "h1:快速开始",
+        "h2:下载 Loomy 客户端",
+        "h2:登录 Loomy",
+        "h2:开始体验"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/quick-start/download.png",
+        "https://loomy.xunfei.cn/docs/images/quick-start/login.png"
+      ],
+      "textHash": "c654d80ec54fcfa2",
+      "textLen": 172
+    },
+    "https://loomy.xunfei.cn/docs/skills-hub/public-skills": {
+      "url": "https://loomy.xunfei.cn/docs/skills-hub/public-skills",
+      "title": "官方推荐技能 | Loomy",
+      "headings": [
+        "h1:官方推荐技能",
+        "h2:什么是技能？",
+        "h2:在哪里找到技能？",
+        "h2:如何使用技能？",
+        "h3:方式一：快捷指令 \"/\"",
+        "h3:方式二：AI 自主识别",
+        "h2:Loomy 内置技能清单",
+        "h3:办公文档类",
+        "h4:Word 文档专家",
+        "h4:Excel 表格专家",
+        "h4:PPT 演示专家",
+        "h4:PDF 处理专家",
+        "h3:商务沟通类",
+        "h4:邮件起草助手",
+        "h3:内容创作类",
+        "h4:小红书卡片生成器",
+        "h4:前端设计大师",
+        "h3:财经投资类",
+        "h4:财经资讯助手",
+        "h4:股票复盘助手",
+        "h3:热点追踪类",
+        "h4:抖音热榜追踪",
+        "h3:研究分析类",
+        "h4:深度研究助手",
+        "h3:生活娱乐类",
+        "h4:命理大师",
+        "h2:常见问题",
+        "h3:如何知道 AI 使用了哪个技能？",
+        "h3:可以禁用或删除已安装的技能吗？",
+        "h3:技能会消耗额外的积分吗？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/skills/where_skills.png",
+        "https://loomy.xunfei.cn/docs/images/skills/skills_view.png",
+        "https://loomy.xunfei.cn/docs/images/skills/quick_skills.png"
+      ],
+      "textHash": "62cc6583ab1f351e",
+      "textLen": 2368
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/chat": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/chat",
+      "title": "聊天 | Loomy",
+      "headings": [
+        "h1:聊天",
+        "h2:开始对话",
+        "h2:使用技能",
+        "h3:方式一：快捷指令 \"/\"",
+        "h3:方式二：AI 自主识别",
+        "h2:任务执行",
+        "h3:单任务执行",
+        "h3:中断任务",
+        "h2:上下文管理",
+        "h3:清空对话",
+        "h2:工具调用",
+        "h2:模型切换",
+        "h2:积分消耗",
+        "h2:常见问题",
+        "h3:为什么我的消息没有立即得到回复？",
+        "h3:如何让 AI 更准确地理解我的需求？",
+        "h3:AI 调用了错误的工具怎么办？",
+        "h3:对话历史会保存多久？",
+        "h3:可以同时进行多个对话吗？"
+      ],
+      "images": [],
+      "textHash": "09c27379523c0c03",
+      "textLen": 1905
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/companions": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/companions",
+      "title": "AI 搭子 | Loomy",
+      "headings": [
+        "h1:AI 搭子",
+        "h2:默认搭子 Loomy",
+        "h2:切换或创建搭子",
+        "h2:使用模板搭子",
+        "h2:创建自定义搭子",
+        "h2:查看和调整搭子",
+        "h2:从新任务选择搭子",
+        "h2:使用建议"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/companions/companion-team-hero.png",
+        "https://loomy.xunfei.cn/docs/images/companions/default-loomy.png",
+        "https://loomy.xunfei.cn/docs/images/companions/ask-loomy-who.png",
+        "https://loomy.xunfei.cn/docs/images/companions/companion-dropdown.png",
+        "https://loomy.xunfei.cn/docs/images/companions/companion-selection.png",
+        "https://loomy.xunfei.cn/docs/images/companions/template-lin-preview.png",
+        "https://loomy.xunfei.cn/docs/images/companions/chat-with-lin.png",
+        "https://loomy.xunfei.cn/docs/images/companions/custom-card.png",
+        "https://loomy.xunfei.cn/docs/images/companions/create-li-bai.png",
+        "https://loomy.xunfei.cn/docs/images/companions/li-bai-avatar.png",
+        "https://loomy.xunfei.cn/docs/images/companions/chat-with-li-bai-weather.png",
+        "https://loomy.xunfei.cn/docs/images/companions/edit-companion-entry.png",
+        "https://loomy.xunfei.cn/docs/images/companions/companion-profile.png",
+        "https://loomy.xunfei.cn/docs/images/companions/new-task-companion.png"
+      ],
+      "textHash": "f63bcff310592f1d",
+      "textLen": 1540
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/credits": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/credits",
+      "title": "积分 | Loomy",
+      "headings": [
+        "h1:积分",
+        "h2:积分有什么用",
+        "h2:使用自定义模型时是否扣积分",
+        "h2:API Key 安全说明",
+        "h2:如何获得积分",
+        "h2:如何查看积分",
+        "h2:5000 积分可以做什么",
+        "h2:使用建议",
+        "h2:常见问题",
+        "h3:积分会在什么情况下消耗更快？",
+        "h3:可以查看历史积分记录吗？",
+        "h3:使用自己的 API Key 会扣积分吗？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/credit/credit.png"
+      ],
+      "textHash": "4d93b5350acd089f",
+      "textLen": 1287
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/custom-models": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/custom-models",
+      "title": "设置自定义模型 | Loomy",
+      "headings": [
+        "h1:设置自定义模型",
+        "h2:1. 进入服务商配置页面",
+        "h2:2. 配置智谱服务商",
+        "h3:2.1 填写 API Key",
+        "h3:2.2 获取可用模型",
+        "h3:2.3 配置模型卡片",
+        "h3:2.4 保存并应用",
+        "h2:3. 启用自定义模型",
+        "h2:4. 配置默认生图模型",
+        "h2:5. 验证配置",
+        "h2:常见问题",
+        "h3:「从 API 获取」失败怎么办？",
+        "h3:配置了上下文窗口但忘记填输出上限会怎样？",
+        "h3:生图模型为什么没有图片输出？",
+        "h3:切换模型需要重启应用吗？",
+        "h3:如何获取 API Key？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-1.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-1.5.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-2.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-2.5.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-2.6.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-3.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-4.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-5.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-7.png",
+        "https://loomy.xunfei.cn/docs/images/custom-models/cm-6.png"
+      ],
+      "textHash": "1934cf38704cb9a6",
+      "textLen": 2057
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/dingding-bot": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/dingding-bot",
+      "title": "设置钉钉机器人 | Loomy",
+      "headings": [
+        "h1:设置钉钉机器人",
+        "h2:适合什么场景",
+        "h2:配置前准备",
+        "h2:基本配置流程",
+        "h2:配置完成后可以做什么",
+        "h2:注意事项",
+        "h2:常见问题",
+        "h3:配置成功后为什么没有响应？",
+        "h3:Stream 模式和 HTTP 模式怎么选？",
+        "h3:钉钉机器人可以执行所有本地操作吗？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/dingding/dingding-1.jpg",
+        "https://loomy.xunfei.cn/docs/images/dingding/dingding-2.jpg",
+        "https://loomy.xunfei.cn/docs/images/dingding/dingding-4.png",
+        "https://loomy.xunfei.cn/docs/images/dingding/dingding-5.jpg"
+      ],
+      "textHash": "fea3f988af318405",
+      "textLen": 946
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/dingding-cli": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/dingding-cli",
+      "title": "配置钉钉 CLI | Loomy",
+      "headings": [
+        "h1:配置钉钉 CLI",
+        "h2:使用前检查",
+        "h2:授权钉钉账号",
+        "h2:使用场景",
+        "h3:查询日程和待办",
+        "h3:发送消息",
+        "h3:处理文档"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/dingding-cli/toolbox-available.png",
+        "https://loomy.xunfei.cn/docs/images/dingding-cli/skills-installed.png",
+        "https://loomy.xunfei.cn/docs/images/dingding-cli/auth-qrcode.png",
+        "https://loomy.xunfei.cn/docs/images/dingding-cli/auth-confirm.png",
+        "https://loomy.xunfei.cn/docs/images/dingding-cli/auth-verify.png"
+      ],
+      "textHash": "00aa2feb5953b9a6",
+      "textLen": 524
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/feishu-bot": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/feishu-bot",
+      "title": "设置飞书机器人 | Loomy",
+      "headings": [
+        "h1:设置飞书机器人",
+        "h2:配置前准备",
+        "h2:具体设置步骤",
+        "h2:配置完成后可以做什么",
+        "h2:注意事项",
+        "h2:常见问题",
+        "h3:为什么飞书里发了消息但 Loomy 没有执行？",
+        "h3:飞书机器人更适合个人还是团队？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-1.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-2.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-3.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-4.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-4-1.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-5.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-6.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-7.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-permission-message.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-permission-resource.png",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-8.jpg",
+        "https://loomy.xunfei.cn/docs/images/feishu/feishu-9.jpg"
+      ],
+      "textHash": "e7c5b8125328f9b7",
+      "textLen": 1131
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/feishu-cli": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/feishu-cli",
+      "title": "配置飞书 CLI | Loomy",
+      "headings": [
+        "h1:配置飞书 CLI",
+        "h2:使用前检查",
+        "h2:授权飞书账号",
+        "h2:使用场景",
+        "h3:查询日程安排",
+        "h3:撰写飞书云文档",
+        "h3:发送消息给指定用户"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/capabilities.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/toolbox-available.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/skills-installed.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/auth-start.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/auth-confirm.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/auth-link.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/auth-browser.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/auth-success.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/auth-done.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/scene-calendar.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/scene-doc.png",
+        "https://loomy.xunfei.cn/docs/images/feishu-cli/scene-send.png"
+      ],
+      "textHash": "21649b5033a20af6",
+      "textLen": 944
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/models": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/models",
+      "title": "模型 | Loomy",
+      "headings": [
+        "h1:模型",
+        "h2:访问模型设置",
+        "h2:默认模型配置",
+        "h2:切换模型",
+        "h2:添加自定义提供商",
+        "h2:常见问题",
+        "h3:切换模型后需要重启应用吗？",
+        "h3:可以同时配置多个提供商吗？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/modelss/m-1.png",
+        "https://loomy.xunfei.cn/docs/images/modelss/m-2.png"
+      ],
+      "textHash": "f1d159ac9e55a70b",
+      "textLen": 546
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/qq-bot": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/qq-bot",
+      "title": "设置 QQ 机器人 | Loomy",
+      "headings": [
+        "h1:设置 QQ 机器人",
+        "h2:适合什么场景",
+        "h2:配置前准备",
+        "h2:基本配置流程",
+        "h2:配置完成后可以做什么",
+        "h2:注意事项",
+        "h2:常见问题",
+        "h3:配置成功后为什么没有响应？",
+        "h3:QQ 机器人可以执行所有本地操作吗？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/qq/remote_qq_1.png",
+        "https://loomy.xunfei.cn/docs/images/qq/remote_qq_2.png",
+        "https://loomy.xunfei.cn/docs/images/qq/remote_qq_3.png",
+        "https://loomy.xunfei.cn/docs/images/qq/remote_qq_4.png",
+        "https://loomy.xunfei.cn/docs/images/qq/remote_qq_5.png",
+        "https://loomy.xunfei.cn/docs/images/qq/Q1.png",
+        "https://loomy.xunfei.cn/docs/images/qq/Q3.png"
+      ],
+      "textHash": "2fdabec46a148808",
+      "textLen": 1092
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/remote-control": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/remote-control",
+      "title": "远程控制 | Loomy",
+      "headings": [
+        "h1:远程控制",
+        "h2:适合什么场景",
+        "h2:基本使用方式",
+        "h2:使用前提",
+        "h2:注意事项",
+        "h2:相关设置指南",
+        "h2:常见问题",
+        "h3:远程控制一定要在电脑前确认吗？",
+        "h3:支持哪些远程控制方式？"
+      ],
+      "images": [],
+      "textHash": "0fdbdcbd119d88e8",
+      "textLen": 678
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/scheduled-tasks": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/scheduled-tasks",
+      "title": "定时任务 | Loomy",
+      "headings": [
+        "h1:定时任务",
+        "h2:适合什么任务",
+        "h2:基本能力",
+        "h2:使用建议",
+        "h2:注意事项",
+        "h2:常见问题",
+        "h3:定时任务适合处理复杂流程吗？",
+        "h3:定时任务失败后怎么办？",
+        "h3:为什么到了时间没有自动执行？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/mission.png"
+      ],
+      "textHash": "83fce3b467e4aa24",
+      "textLen": 775
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/toolbox": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/toolbox",
+      "title": "工具箱 | Loomy",
+      "headings": [
+        "h1:工具箱",
+        "h2:什么是 MCP？",
+        "h2:访问工具箱设置",
+        "h2:内置 MCP 服务",
+        "h2:添加外部 MCP",
+        "h2:配置示例：QQ 邮箱 MCP",
+        "h3:1. 配置邮箱信息",
+        "h3:2. 使用场景示例",
+        "h2:常见问题",
+        "h3:QQ 邮箱授权码怎么获取？",
+        "h3:配置信息安全吗？",
+        "h3:可以同时配置多个 MCP 吗？",
+        "h3:如何禁用某个 MCP？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/toolbox/mcp.png",
+        "https://loomy.xunfei.cn/docs/images/toolbox/qmail.png",
+        "https://loomy.xunfei.cn/docs/images/toolbox/toolbox-email-read.png",
+        "https://loomy.xunfei.cn/docs/images/toolbox/toolbox-email-send.png",
+        "https://loomy.xunfei.cn/docs/images/toolbox/toolbox-qq-step1.png",
+        "https://loomy.xunfei.cn/docs/images/toolbox/toolbox-qq-step2.png",
+        "https://loomy.xunfei.cn/docs/images/toolbox/toolbox-qq-step3.png",
+        "https://loomy.xunfei.cn/docs/images/toolbox/toolbox-qq-step4.png"
+      ],
+      "textHash": "ec9aa465f94d5824",
+      "textLen": 1498
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/wechat-bot": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/wechat-bot",
+      "title": "设置微信机器人 | Loomy",
+      "headings": [
+        "h1:设置微信机器人",
+        "h2:适合什么场景",
+        "h2:配置前准备",
+        "h2:基本配置流程",
+        "h3:1. 进入远程控制设置",
+        "h3:2. 选择微信机器人",
+        "h3:3. 扫码绑定设备",
+        "h3:4. 确认连接状态",
+        "h3:5. 开始使用",
+        "h2:配置完成后可以做什么",
+        "h2:注意事项",
+        "h2:常见问题",
+        "h3:为什么微信里发了消息但 Loomy 没有执行？",
+        "h3:微信机器人更适合个人还是团队？",
+        "h3:可以同时绑定多个设备吗？"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/wechat/wechat-1.png",
+        "https://loomy.xunfei.cn/docs/images/wechat/wechat-2.png",
+        "https://loomy.xunfei.cn/docs/images/wechat/wechat-3.png",
+        "https://loomy.xunfei.cn/docs/images/wechat/wechat-4.png"
+      ],
+      "textHash": "57e9e25e4df90cf7",
+      "textLen": 1039
+    },
+    "https://loomy.xunfei.cn/docs/user-guide/wecom-cli": {
+      "url": "https://loomy.xunfei.cn/docs/user-guide/wecom-cli",
+      "title": "配置企业微信 CLI | Loomy",
+      "headings": [
+        "h1:配置企业微信 CLI",
+        "h2:配置步骤",
+        "h2:使用前检查",
+        "h2:开始使用"
+      ],
+      "images": [
+        "https://loomy.xunfei.cn/docs/images/wecom-cli/toolbox-config.png",
+        "https://loomy.xunfei.cn/docs/images/wecom-cli/toolbox-open.png",
+        "https://loomy.xunfei.cn/docs/images/wecom-cli/terminal-init.png"
+      ],
+      "textHash": "b496b91108e03df4",
+      "textLen": 462
+    }
+  }
+}

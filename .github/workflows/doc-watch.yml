@@ -1,0 +1,76 @@
+name: doc-watch
+
+# 每日抓取上游文档站（Loomy Docs / AstronClaw 使用指南），与仓库基线对比，
+# 发现新增内容或图片时，自动维护一条 [doc-watch] Issue 汇总待补全清单。
+#
+# 触发：每天 01:00 UTC（北京时间 09:00）+ 可手动触发。
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run doc-watch
+        id: watch
+        run: |
+          set +e
+          node scripts/doc-watch/check-updates.mjs --report doc-watch-report.md
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          set -e
+
+      - name: Upsert summary issue on changes
+        if: steps.watch.outputs.code == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BODY_FILE=doc-watch-report.md
+          {
+            echo ""
+            echo "---"
+            echo "_由 \`doc-watch\` 工作流自动生成 · run [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})_"
+            echo ""
+            echo "处理完成后，在补全内容的 PR 里执行 \`node scripts/doc-watch/check-updates.mjs --update\` 刷新基线，本 Issue 即可关闭。"
+          } >> "$BODY_FILE"
+
+          TITLE="[doc-watch] 上游文档有新增内容待补全"
+          EXISTING=$(gh issue list --label doc-watch --state open --json number --jq '.[0].number' 2>/dev/null)
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --body-file "$BODY_FILE"
+            gh issue comment "$EXISTING" --body "🔄 巡检报告已于本次 run 更新（run #${{ github.run_number }}）。"
+            echo "Updated issue #$EXISTING"
+          else
+            gh label create doc-watch --color FBCA04 --description "上游文档巡检" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label doc-watch --body-file "$BODY_FILE"
+          fi
+
+      - name: Report capture failure
+        if: steps.watch.outputs.code == '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create doc-watch --color FBCA04 --description "上游文档巡检" 2>/dev/null || true
+          gh issue create \
+            --title "[doc-watch] ⚠️ 巡检抓取失败" \
+            --label doc-watch \
+            --body "doc-watch 工作流抓取上游文档时出错，请查看 run [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) 日志。可能是上游站点改版或网络问题。"
+
+      - name: Upload report artifact
+        if: steps.watch.outputs.code == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: doc-watch-report
+          path: doc-watch-report.md
