@@ -636,6 +636,61 @@
   },
   {
     "lang": "zh",
+    "heading": "实战：打造你的个人 AI 搭子",
+    "content": "很多人对 AI 助手的期待，已经从「问一句答一句」变成了「一个越用越懂我的伙伴」——它记得我的偏好、能跨设备接续上次的对话，还能基于我的习惯主动帮我把事情往前推。\n\n好消息是，你不需要自己搭一套复杂的记忆系统。**AstronClaw（云端大脑）+ Loomy（桌面入口）** 这套组合已经把所需的能力都准备好了，本篇带你把它们拼成一个真正属于你的「个人 AI 搭子」。"
+  },
+  {
+    "lang": "zh",
+    "heading": "它由哪些部分组成",
+    "content": "| 角色 | 承担什么 | 对应能力 |\n| :--- | :--- | :--- |\n| **AstronClaw（云端）** | 7×24 小时在线的大脑，托管模型与技能，电脑关机也不掉线 | [核心优势与对比](/guide/astronclaw/introduction)、[技能系统](/guide/astronclaw/skills) |\n| **Loomy（桌面）** | 本地入口，连接你的文件、应用与即时通讯渠道 | [介绍与定位](/guide/loomy/introduction) |\n| **AI 搭子** | 有性格、懂你节奏的协作人格 | [AI 搭子](/guide/loomy/companions) |\n| **资料库** | 让搭子能安全访问并记住你本机的资料 | [资料库](/guide/loomy/knowledge-base) |\n| **定时任务** | 让搭子在固定时间主动替你执行流程 | [定时任务](/guide/loomy/scheduled-tasks) |\n| **远程控制** | 通过 QQ / 微信 / 飞书 / 钉钉跨设备指挥 | [远程控制](/guide/loomy/remote-control) |\n\n下面分三步，把这些能力组装成一个「记得你、跟得上你、还会主动帮你」的搭子。"
+  },
+  {
+    "lang": "zh",
+    "heading": "第一步：让搭子「记得你」",
+    "content": "「记忆」不是某一个开关，而是由三层叠加出来的效果。逐层配置好，搭子才会越用越像你的人。"
+  },
+  {
+    "lang": "zh",
+    "heading": "1. 用「搭子」固化协作风格",
+    "content": "AI 搭子会在一次次协作里慢慢熟悉你的节奏。先选一个贴合你工作方式的搭子，或直接创建一个专属的：\n\n> 帮我创建一个「日常工作搭子」：定位是我的个人助理，说话简洁直接、结果导向，熟悉我做的是科技内容运营，回复时默认用要点列表。\n\n这样每次对话都不必从头交代背景，搭子的人设本身就是一份「关于你」的长期设定。创建与调整方法见 [AI 搭子](/guide/loomy/companions)。"
+  },
+  {
+    "lang": "zh",
+    "heading": "2. 用「资料库」沉淀你的资料",
+    "content": "把常用目录授权给资料库后，Loomy 会在**本地**持续扫描并自动归类你的文档与图片——这相当于给搭子一份随时可查的「个人知识库」。\n\n> 你在资料库里帮我找一下上个月那份项目复盘文档，结合里面的结论，帮我起草这个月的计划。\n\n这样搭子的回答会建立在你真实的历史资料之上，而不是泛泛而谈。\n\n> **隐私说明**：资料的扫描、归类和索引都在你的本地设备完成，内容不会上传。详见[资料库](/guide/loomy/knowledge-base)。"
+  },
+  {
+    "lang": "zh",
+    "heading": "3. 用「自定义模型」掌控成本与延续性",
+    "content": "如果你已经有稳定的模型服务，可以在 Loomy 中配置自己的 API Key。使用自有 Key 时模型调用通常不消耗 Loomy 积分，长期高频使用更划算。配置方式与积分规则见 [定时任务与积分说明](/guide/loomy/scheduled-tasks)。\n\n> **API Key 安全**：你配置的 Key 只保存在本地设备，Loomy 不会托管或上传。"
+  },
+  {
+    "lang": "zh",
+    "heading": "第二步：跨设备接续",
+    "content": "个人搭子的价值在于「人走了，活还在干」。这一步靠 AstronClaw 的云端常驻 + Loomy 的远程控制来实现。\n\n- **云端不掉线**：AstronClaw 在云端 7×24 小时运行，不依赖你的电脑是否开机，这是「随时找得到」的基础。\n- **消息渠道遥控**：给 Loomy 接入 QQ / 微信 / 飞书 / 钉钉机器人，你在手机上发一句话就能触发任务、查看进度、取回结果。接入步骤见 [远程控制](/guide/loomy/remote-control)。\n\n典型用法：上午在工位用桌面端布置一个整理任务，中午离开后在手机微信里问一句「上午那个整理任务跑完了吗？把结果发我」，搭子就会把结果回传过来。\n\n> **前提**：远程控制和定时任务都依赖 Loomy 在本地设备**保持后台运行**。如果应用被完全退出，任务将无法触发。"
+  },
+  {
+    "lang": "zh",
+    "heading": "第三步：让搭子主动帮你——「每日简报与计划官」",
+    "content": "把前两步攒下的「记忆」用起来，配合定时任务，就能得到一个会主动工作的搭子。下面是一个可直接照搬的例子。\n\n**目标**：每天早上 8:00，让搭子结合你的资料库和昨日进度，生成一份当天的简报与计划，并通过远程渠道推送给你。\n\n**定时任务 Prompt 示例**：\n\n> 每天早上 8:00 执行：\n> 1. 汇总今天合肥的天气，以及科技领域值得关注的 3 条热点；\n> 2. 在资料库里翻一下我最近的「周计划」文档，列出今天应该推进的任务；\n> 3. 扫一眼未读邮件，标出需要今天回复的；\n> 4. 把以上整理成一张「今日简报」卡片，并通过微信机器人发给我。\n\n它把多项能力串成了一条个性化流程：\n\n* **主动性**：定时触发，不用你每天手动开口。\n* **记忆**：从资料库读取你真实的计划与历史。\n* **个性化**：搭子按你设定的人设与偏好来组织输出。\n* **跨设备**：结果直接推送到手机，离开工位也收得到。\n\n> **稳定执行建议**：涉及多步操作或外部工具的任务，建议先**手动跑通一次**，确认权限和工具都就绪，再设为定时任务，可显著降低自动执行时的跑偏概率。"
+  },
+  {
+    "lang": "zh",
+    "heading": "进阶建议",
+    "content": "* **一人多搭子**：可以按场景养不同的搭子——稳健推进型用于工作复盘，创意陪伴型用于内容发散。切换搭子就是切换协作风格。\n* **从手动到自动**：先在日常对话里把一个流程打磨顺，再固化成定时任务，成功率最高。\n* **善用搜索弹框**：用快捷键随时唤起[搜索弹框](/guide/loomy/knowledge-base#搜索弹框)，在任意界面把任务直接交给搭子。"
+  },
+  {
+    "lang": "zh",
+    "heading": "常见问题",
+    "content": "**搭子真的会「记住」我说过的话吗？**\n搭子的「记忆」来自三处：人设设定（固化你的协作偏好）、资料库（你授权的本地资料）、以及任务与对话上下文。把前两者配置好，就能稳定地获得「越用越懂你」的体验，而不依赖某个单独的记忆开关。\n\n**资料库会把我的文件传到云端吗？**\n不会。授权后，扫描、归类与索引都在本地完成，内容仅用于本地检索。\n\n**离开电脑后还能用吗？**\n可以查看与触发。AstronClaw 云端常驻保证「找得到」，但真正落到本地的任务执行仍需 Loomy 在设备上后台运行。"
+  },
+  {
+    "lang": "zh",
+    "heading": "相关阅读",
+    "content": "* [AI 搭子](/guide/loomy/companions)\n* [资料库](/guide/loomy/knowledge-base)\n* [定时任务与积分说明](/guide/loomy/scheduled-tasks)\n* [远程控制](/guide/loomy/remote-control)\n* [典型场景](/guide/loomy/scenarios)\n* [AstronClaw 核心优势与对比](/guide/astronclaw/introduction)"
+  },
+  {
+    "lang": "zh",
     "heading": "加入 Waiting List",
     "content": "首先在官网申请加入 Waiting List，提交基础信息后等待审核。\n\n![加入 Waiting List](/loomy/quick-start/waiting.png)"
   },
@@ -1503,6 +1558,61 @@
     "lang": "en",
     "heading": "FAQ",
     "content": "**What's the difference between Office CLI and remote-control bots?**\nRemote-control bots use phone messages as a remote entry point to trigger your local Loomy to execute tasks; Office CLI lets Loomy directly read and write the messages, documents, and schedules inside your Feishu / DingTalk / WeCom. The two can be used together.\n\n**Do I need to repeat the authorization later?**\nNo. The authorization for the Feishu and DingTalk CLIs only needs to be done once, and can be used long-term after success.\n\n**Why does the WeCom CLI card say it's unavailable?**\nThe WeCom CLI is currently only open to enterprises with ≤ 10 people. Enterprises exceeding the headcount limit cannot use it for now."
+  },
+  {
+    "lang": "en",
+    "heading": "Hands-on: Build Your Personal AI Companion",
+    "content": "People increasingly expect more from an AI assistant than one-off answers. They want a partner that gets to know them over time — one that remembers preferences, picks up the last conversation from any device, and proactively moves work forward based on their habits.\n\nThe good news: you don't need to build a complex memory system yourself. The **AstronClaw (cloud brain) + Loomy (desktop interface)** combo already provides the building blocks. This guide shows how to assemble them into a personal AI companion that's truly yours."
+  },
+  {
+    "lang": "en",
+    "heading": "What it's made of",
+    "content": "| Role | Responsibility | Related docs |\n| :--- | :--- | :--- |\n| **AstronClaw (Cloud)** | An always-on brain that hosts models and skills, online 24/7 even when your computer is off | [Core Advantages](/en/guide/astronclaw/introduction), [Skills System](/en/guide/astronclaw/skills) |\n| **Loomy (Desktop)** | The local interface that connects your files, apps, and messaging channels | [Introduction](/en/guide/loomy/introduction) |\n| **AI Companion** | A collaboration persona with character that learns your rhythm | [AI Companions](/en/guide/loomy/companions) |\n| **Knowledge Base** | Lets the companion securely access and remember your local materials | [Knowledge Base](/en/guide/loomy/knowledge-base) |\n| **Scheduled Tasks** | Lets the companion proactively run workflows at set times | [Scheduled Tasks](/en/guide/loomy/scheduled-tasks) |\n| **Remote Control** | Command it across devices via QQ / WeChat / Feishu / DingTalk | [Remote Control](/en/guide/loomy/remote-control) |\n\nThe three steps below assemble these capabilities into a companion that **remembers you, keeps up with you, and helps you proactively**."
+  },
+  {
+    "lang": "en",
+    "heading": "Step 1: Make it \"remember\" you",
+    "content": "\"Memory\" isn't a single switch — it's an effect layered from three sources. Configure each layer and the companion will feel more and more like your own."
+  },
+  {
+    "lang": "en",
+    "heading": "1. Lock in a collaboration style with a \"Companion\"",
+    "content": "An AI companion gradually learns your rhythm through repeated collaboration. Pick one that fits how you work, or create a dedicated one:\n\n> Create a \"Daily Work Companion\" for me: act as my personal assistant, speak concisely and directly, be results-oriented, know that I run a tech-content operation, and default to bullet points in replies.\n\nNow you don't have to re-explain your context every time — the companion's persona is itself a long-lived profile \"about you.\" See [AI Companions](/en/guide/loomy/companions) for how to create and adjust them."
+  },
+  {
+    "lang": "en",
+    "heading": "2. Build up your materials with the \"Knowledge Base\"",
+    "content": "Once you authorize your common folders, Loomy continuously scans and auto-categorizes your documents and images **locally** — effectively giving the companion a personal knowledge base it can consult anytime.\n\n> Find last month's project retrospective in my knowledge base, and use its conclusions to help me draft this month's plan.\n\nThis way the companion's answers are grounded in your real history rather than generic advice.\n\n> **Privacy note**: Scanning, categorization, and indexing all happen on your local device — content is never uploaded. See [Knowledge Base](/en/guide/loomy/knowledge-base)."
+  },
+  {
+    "lang": "en",
+    "heading": "3. Control cost and continuity with a \"Custom Model\"",
+    "content": "If you already have a reliable model service, configure your own API Key in Loomy. With your own key, model calls usually don't consume Loomy points — a better deal for heavy long-term use. For setup and the points rules, see [Scheduled Tasks & Points](/en/guide/loomy/scheduled-tasks).\n\n> **API Key safety**: Your key is stored only on your local device — Loomy never hosts or uploads it."
+  },
+  {
+    "lang": "en",
+    "heading": "Step 2: Continuity across devices",
+    "content": "A personal companion proves its worth when \"you leave but the work keeps going.\" This relies on AstronClaw's always-on cloud plus Loomy's remote control.\n\n- **The cloud stays online**: AstronClaw runs 24/7 in the cloud, independent of whether your computer is on — the foundation for being \"reachable anytime.\"\n- **Drive it from messaging**: Connect QQ / WeChat / Feishu / DingTalk bots to Loomy, then trigger tasks, check progress, and retrieve results with a single message from your phone. See [Remote Control](/en/guide/loomy/remote-control).\n\nA typical flow: in the morning you queue a tidy-up task from the desktop; after you leave at noon you ask via WeChat, \"Did the tidy-up task finish? Send me the result,\" and the companion sends it back.\n\n> **Prerequisite**: Both remote control and scheduled tasks require Loomy to **keep running in the background** on your local device. If the app is fully quit, tasks won't trigger."
+  },
+  {
+    "lang": "en",
+    "heading": "Step 3: Let it work proactively — a \"Daily Digest & Planner\"",
+    "content": "Put the \"memory\" from the first two steps to work, combine it with scheduled tasks, and you get a companion that acts on its own. Here's a ready-to-copy example.\n\n**Goal**: Every morning at 8:00, have the companion combine your knowledge base and yesterday's progress to produce today's digest and plan, then push it to you via a remote channel.\n\n**Sample scheduled-task prompt**:\n\n> Run every day at 8:00 AM:\n> 1. Summarize today's weather for my city and 3 noteworthy tech headlines;\n> 2. Look up my recent \"weekly plan\" document in the knowledge base and list what I should push forward today;\n> 3. Scan unread emails and flag the ones that need a reply today;\n> 4. Compile the above into a \"Today's Digest\" card and send it to me via the WeChat bot.\n\nThis chains several capabilities into one personalized workflow:\n\n* **Proactive**: triggered on schedule — no need to ask every day.\n* **Memory**: reads your real plans and history from the knowledge base.\n* **Personalized**: the companion organizes output per the persona and preferences you set.\n* **Cross-device**: the result is pushed straight to your phone, even away from your desk.\n\n> **Tip for reliable runs**: For tasks with multiple steps or external tools, **run it manually once** first to confirm permissions and tools are ready, then turn it into a scheduled task. This significantly reduces drift during automated runs."
+  },
+  {
+    "lang": "en",
+    "heading": "Going further",
+    "content": "* **Multiple companions**: keep different companions per scenario — a steady one for work retrospectives, a creative one for brainstorming. Switching companions means switching collaboration styles.\n* **From manual to automated**: polish a workflow in everyday chat first, then freeze it into a scheduled task for the highest success rate.\n* **Use the search popup**: summon the [search popup](/en/guide/loomy/knowledge-base) with a shortcut to hand a task to your companion from any screen."
+  },
+  {
+    "lang": "en",
+    "heading": "FAQ",
+    "content": "**Does the companion really \"remember\" what I said?**\nIts \"memory\" comes from three places: the persona settings (which lock in your collaboration preferences), the knowledge base (your authorized local materials), and task/conversation context. Configure the first two well and you'll reliably get the \"knows you better over time\" experience — without relying on any single memory switch.\n\n**Does the knowledge base upload my files to the cloud?**\nNo. After authorization, scanning, categorization, and indexing all happen locally, and content is used only for local retrieval.\n\n**Can I use it after leaving my computer?**\nYou can view and trigger tasks. AstronClaw's always-on cloud keeps it \"reachable,\" but actual local task execution still requires Loomy running in the background on your device."
+  },
+  {
+    "lang": "en",
+    "heading": "Related reading",
+    "content": "* [AI Companions](/en/guide/loomy/companions)\n* [Knowledge Base](/en/guide/loomy/knowledge-base)\n* [Scheduled Tasks & Points](/en/guide/loomy/scheduled-tasks)\n* [Remote Control](/en/guide/loomy/remote-control)\n* [Scenarios](/en/guide/loomy/scenarios)\n* [AstronClaw Core Advantages](/en/guide/astronclaw/introduction)"
   },
   {
     "lang": "en",
