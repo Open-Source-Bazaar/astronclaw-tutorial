@@ -52,6 +52,7 @@ export default defineConfig({
               { text: '远程控制', link: '/guide/loomy/remote-control' },
               { text: '办公 CLI 集成', link: '/guide/loomy/office-cli' },
               { text: '典型工作场景', link: '/guide/loomy/scenarios' },
+              { text: '实战：打造个人 AI 搭子', link: '/guide/loomy/personal-companion' },
               { text: '常见问题', link: '/guide/loomy/faq' }
             ]
           }
@@ -102,6 +103,7 @@ export default defineConfig({
               { text: 'Remote Control', link: '/en/guide/loomy/remote-control' },
               { text: 'Office CLI', link: '/en/guide/loomy/office-cli' },
               { text: 'Scenarios', link: '/en/guide/loomy/scenarios' },
+              { text: 'Build a Personal AI Companion', link: '/en/guide/loomy/personal-companion' },
               { text: 'FAQ', link: '/en/guide/loomy/faq' }
             ]
           }
