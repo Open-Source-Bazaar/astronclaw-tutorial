@@ -7,8 +7,8 @@
     "npm:medium-zoom@^1.1.0": "1.1.0",
     "npm:vitepress@^1.6.4": "1.6.4_typescript@6.0.3",
     "npm:vue@^3.5.30": "3.5.30_typescript@6.0.3",
-    "npm:web-utility@*": "4.6.6_element-internals-polyfill@3.0.2_typescript@6.0.3",
-    "npm:zx@*": "8.8.5"
+    "npm:web-utility@4.6.6": "4.6.6_element-internals-polyfill@3.0.2_typescript@6.0.3",
+    "npm:zx@8.8.5": "8.8.5"
   },
   "npm": {
     "@algolia/abtesting@1.15.2": {
