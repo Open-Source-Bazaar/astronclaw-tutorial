@@ -1,5 +1,0 @@
-{
-  "tasks": {
-    "count-reward": "deno --frozen --allow-run=git,gh --allow-sys --allow-env --allow-read --allow-net=api.github.com .github/scripts/count-reward.ts"
-  }
-}
