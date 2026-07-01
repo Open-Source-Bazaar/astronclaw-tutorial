@@ -1,0 +1,42 @@
+{
+  "version": "5",
+  "specifiers": {
+    "npm:web-utility@4.6.6": "4.6.6_element-internals-polyfill@3.0.2_typescript@6.0.3",
+    "npm:zx@8.8.5": "8.8.5"
+  },
+  "npm": {
+    "@swc/helpers@0.5.23": {
+      "integrity": "sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==",
+      "dependencies": [
+        "tslib"
+      ]
+    },
+    "element-internals-polyfill@3.0.2": {
+      "integrity": "sha512-uB0/Qube3lkwh8SmkTnGIyUgJ9YdqVSzIoHMRCEQjAbD4Y5UzsVbch1tIxjTgUe5k3gy1U0ZMKMJ90A81lqwig=="
+    },
+    "regenerator-runtime@0.14.1": {
+      "integrity": "sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw=="
+    },
+    "tslib@2.8.1": {
+      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
+    },
+    "typescript@6.0.3": {
+      "integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
+      "bin": true
+    },
+    "web-utility@4.6.6_element-internals-polyfill@3.0.2_typescript@6.0.3": {
+      "integrity": "sha512-ia1yi7NC6wF3ScTW9U2nu4VAjuKHbpXuluh3x8b0LSMiM49V5MexA+asaidmURMZ3gTTRD+ymw5+W4MWSaazqg==",
+      "dependencies": [
+        "@swc/helpers",
+        "element-internals-polyfill",
+        "regenerator-runtime",
+        "typescript"
+      ],
+      "deprecated": true
+    },
+    "zx@8.8.5": {
+      "integrity": "sha512-SNgDF5L0gfN7FwVOdEFguY3orU5AkfFZm9B5YSHog/UDHv+lvmd82ZAsOenOkQixigwH2+yyH198AwNdKhj+RA==",
+      "bin": true
+    }
+  }
+}

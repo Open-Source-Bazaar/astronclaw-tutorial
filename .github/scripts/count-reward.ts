@@ -1,5 +1,5 @@
-import { changeMonth, formatDate, makeDateRange } from "npm:web-utility";
-import { $, YAML } from "npm:zx";
+import { changeMonth, formatDate, makeDateRange } from "npm:web-utility@4.6.6/source/date";
+import { $, YAML } from "npm:zx@8.8.5";
 
 import { Reward } from "./type.ts";
 
